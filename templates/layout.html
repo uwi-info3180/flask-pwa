@@ -6,12 +6,31 @@
     <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
     <title>Flask PWA</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="{{ url_for('static', filename='service-worker.js') }}"></script>
+{#    <script src="/service-worker.js"></script>#}
     <script src="{{ url_for('static', filename='app.js') }}"></script>
 </head>
 <body>
-{% block body %}
+    <header>
+        <nav>
+            <div class="logo">PWA Inc.</div>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Characteristics</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Flask Progressive Web App (PWA)</h1>
+            <p>The next BIG thing for the mobile web!</p>
+        </div>
+    </header>
+    <main>
+        {% block body %}
 
-{% endblock %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; Flaskr Inc.</p>
+    </footer>
 </body>
 </html>

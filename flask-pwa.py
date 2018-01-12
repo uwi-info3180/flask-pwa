@@ -7,6 +7,14 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/offline.html')
+def offline():
+    return app.send_static_file('offline.html')
+
+@app.route('/service-worker.js')
+def sw():
+    return app.send_static_file('service-worker.js')
+
 @app.route('/api/news')
 def api_news():
     return jsonify({'message': 'testing 1 2 3'})

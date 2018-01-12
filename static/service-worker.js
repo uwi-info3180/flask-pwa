@@ -1,8 +1,9 @@
-const cacheName = 'flask-PWA-v2';
+const cacheName = 'flask-PWA-v3';
 const filesToCache = [
     '/',
     '/static/app.js',
-    '/static/styles.css'
+    '/static/styles.css',
+    '/offline.html'
 ];
 
 self.addEventListener('install', function(e) {
@@ -34,7 +35,10 @@ self.addEventListener('fetch', function(e) {
   console.log('[ServiceWorker] Fetch', e.request.url);
   e.respondWith(
     caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
+      return response || fetch(e.request).catch(error => {
+          console.log('Fetch failed; returning offline page instead.', error);
+          return caches.match('offline.html');
+      });
     })
   );
 });
