@@ -14,8 +14,8 @@
         <nav>
             <div class="logo">PWA Inc.</div>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Characteristics</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#characteristics">Characteristics</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
         </nav>
@@ -25,9 +25,11 @@
         </div>
     </header>
     <main>
-        {% block body %}
+        <div class="container">
+            {% block body %}
 
-        {% endblock %}
+            {% endblock %}
+        </div>
     </main>
     <footer>
         <p>&copy; Flaskr Inc.</p>
