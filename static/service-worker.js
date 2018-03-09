@@ -3,6 +3,7 @@ const filesToCache = [
     '/',
     '/static/app.js',
     '/static/styles.css',
+    '/static/manifest.json',
     '/offline.html'
 ];
 

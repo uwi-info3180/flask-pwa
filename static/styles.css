@@ -7,9 +7,13 @@ body {
     margin: 0;
 }
 
+.container {
+    max-width: 960px;
+}
+
 header {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     flex-direction: column;
     background: url("/static/images/luca-bravo-272609.png") no-repeat center center;
     background-size: cover;
@@ -35,7 +39,8 @@ header .hero {
     align-items: center;
     flex-direction: column;
     z-index: 4;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
+    min-height: 300px;
 }
 
 header .hero h1 {
@@ -57,7 +62,7 @@ header nav {
     float: left;
     z-index: 4;
     width: 960px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 header nav .logo {
@@ -112,6 +117,36 @@ main {
 
 main h2 {
     text-align: center;
+}
+
+main section {
+    margin: 40px 0;
+    min-height: 400px;
+}
+
+section#about {
+    display: flex;
+}
+
+section#about .media-img {
+    margin-right: 20px;
+}
+
+section#about .media-img img {
+    width: 400px;
+    height: auto;
+}
+
+section#about .details {
+    /*font-size: 24px;*/
+    font-family: 'Playfair Display';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#about .details h2 {
+    text-align: left;
 }
 
 .characteristics {
