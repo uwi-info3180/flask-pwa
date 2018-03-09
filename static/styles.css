@@ -41,6 +41,8 @@ header .hero {
     z-index: 4;
     /*margin-top: 40px;*/
     min-height: 300px;
+    padding: 0 10px;
+    text-align: center;
 }
 
 header .hero h1 {
@@ -59,14 +61,17 @@ header .hero p {
 }
 
 header nav {
-    float: left;
+    /*float: left;*/
     z-index: 4;
     width: 960px;
     margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
 }
 
 header nav .logo {
-    float: left;
+    /*float: left;*/
     background: url('images/pwa-light.png') no-repeat top left;
     background-size: 100px 37px;
     width: 100px;
@@ -78,10 +83,10 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    float: left;
-    width: 82.8125%;
+    /*float: left;*/
+    /*width: 82.8125%;*/
     margin-right: 0;
-    text-align: right;
+    /*text-align: right;*/
 }
 
 header nav ul li {
@@ -121,7 +126,7 @@ main h2 {
 
 main section {
     margin: 40px 0;
-    min-height: 400px;
+    min-height: 300px;
 }
 
 section#about {
@@ -130,10 +135,12 @@ section#about {
 
 section#about .media-img {
     margin-right: 20px;
+    /*width: 400px;*/
+    flex: 1;
 }
 
 section#about .media-img img {
-    width: 400px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -142,7 +149,8 @@ section#about .details {
     font-family: 'Playfair Display';
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
+    flex: 2;
 }
 
 section#about .details h2 {
@@ -170,11 +178,23 @@ section#about .details h2 {
     main {
         max-width: 768px;
     }
+
+    header nav {
+        width: 768px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     main {
         max-width: 480px;
+    }
+
+    header nav {
+        width: 480px;
+    }
+
+    #about {
+        flex-direction: column;
     }
 }
 
@@ -182,10 +202,25 @@ section#about .details h2 {
     main {
         max-width: 320px;
     }
+
+    header nav {
+        width: 320px;
+        flex-direction: column;
+        /*justify-content: ;*/
+        align-items: center;
+    }
+
+    header nav ul {
+        margin: 10px 0;
+    }
 }
 
 @media screen and (max-width: 320px) {
     main {
         max-width: 240px;
+    }
+
+    header nav {
+        width: 240px;
     }
 }
