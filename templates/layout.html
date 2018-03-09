@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="theme-color" content="#34A5DA">
+    <link rel="icon" sizes="192x192" href="{{ url_for('static', filename='images/android-launchericon-192-192.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
     <title>Flask PWA</title>
+    <meta name="description" content="A demo flask progressive web app">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-{#    <script src="/service-worker.js"></script>#}
-    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </head>
 <body>
     <header>
@@ -32,5 +33,7 @@
     <footer>
         <p>&copy; Flaskr Inc.</p>
     </footer>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

@@ -1,8 +1,36 @@
 {
-    "name": "Flask PWA",
-    "theme_color": "aliceblue",
-    "icons": [],
-    "start_url": "index.html",
+    "name": "Demo Flask Progressive Web App (PWA)",
+    "short_name": "Flask PWA",
+    "theme_color": "#34A5DA",
+    "background_color": "#FFFFFF",
+    "icons": [
+        {
+          "src": "/static/images/android-launchericon-48-48.png",
+          "type": "image/png",
+          "sizes": "48x48"
+        },
+        {
+          "src": "/static/images/android-launchericon-96-96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "/static/images/android-launchericon-144-144.png",
+          "type": "image/png",
+          "sizes": "144x144"
+        },
+        {
+          "src": "/static/images/android-launchericon-192-192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "/static/images/android-launchericon-512-512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
     "display": "standalone",
     "orientation": "portrait"
 }
