@@ -107,7 +107,7 @@ header nav ul li a:hover {
 
 main {
     margin: 0 auto;
-    width: 960px;
+    max-width: 960px;
 }
 
 main h2 {
@@ -129,4 +129,28 @@ main h2 {
 
 .card h3 {
     font-family: 'Playfair Display';
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        max-width: 480px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        max-width: 320px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    main {
+        max-width: 240px;
+    }
 }
