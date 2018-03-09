@@ -1,6 +1,6 @@
 // This is based on the First Progressive Web App Tutorial by Google
 // https://codelabs.developers.google.com/codelabs/your-first-pwapp/
-const cacheName = 'flask-PWA-v3';
+const cacheName = 'flask-PWA-v4';
 const filesToCache = [
     '/',
     '/static/app.js',
@@ -44,6 +44,8 @@ self.addEventListener('activate', function(e) {
 // Serve the app shell from the cache
 // If the file is not in the cache then try to get it via the network.
 // otherwise give an error and display an offline page
+// This is a just basic example, a better solution is to use the
+// Service Worker Precache module https://github.com/GoogleChromeLabs/sw-precache
 self.addEventListener('fetch', function(e) {
   console.log('[ServiceWorker] Fetch', e.request.url);
   e.respondWith(
