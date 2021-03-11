@@ -1,3 +1,20 @@
+# Files to ignore when adding and committing files to a repository
 .DS_Store
+Thumbs.db
+
+*.py[cod]
+*$py.class
+__pycache__
+
+# virtualenv
+.venv/
 venv/
+
+# nodejs
+node_modules
+
+# PyCharm
 .idea
+
+# VS Code
+.vscode
