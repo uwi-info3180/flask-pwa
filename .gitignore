@@ -18,3 +18,7 @@ node_modules
 
 # VS Code
 .vscode
+
+# Environment Variables
+.env
+.flaskenv
