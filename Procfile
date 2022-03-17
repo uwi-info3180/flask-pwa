@@ -1,1 +1,1 @@
-web: python flask-pwa.py
+web: gunicorn -w 4 -b "0.0.0.0:$PORT" flask-pwa:app
