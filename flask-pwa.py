@@ -22,6 +22,11 @@ def offline():
 def sw():
     return app.send_static_file('service-worker.js')
 
-
-if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=8080)
+@app.after_request
+def add_header(response):
+    """
+    Add headers to tell the browser not to cache the rendered page. If we wanted
+    to we could change max-age to 600 seconds which would be 10 minutes.
+    """
+    response.headers['Cache-Control'] = 'public, max-age=0'
+    return response
