@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Offline!</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <style>
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<h1>It seems you might be offline!</h1>
-<p><a href="/">Go back to home page </a></p>
+    <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="180" stroke-linejoin="round">
+            <path stroke="#DDD" stroke-width="25" d="M99,18 15,162H183z"/>
+            <path stroke-width="17" fill="#FFF" d="M99,18 15,162H183z" stroke="#eee"/>
+            <path d="M91,70a9,9 0 0,1 18,0l-5,50a4,4 0 0,1-8,0z" fill="#aaa"/>
+            <circle cy="138" r="9" cx="100" fill="#aaa"/>
+        </svg>
+        <h1>It seems you might be offline!</h1>
+        <p><a href="/">Go back to home page </a></p>
+    </div>
 </body>
 </html>
