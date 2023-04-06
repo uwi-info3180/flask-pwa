@@ -9,13 +9,14 @@ body {
 
 .container {
     max-width: 960px;
+    margin: 0 auto;
 }
 
 header {
     display: flex;
     /*justify-content: center;*/
     flex-direction: column;
-    background: url("/static/images/luca-bravo-272609.png") no-repeat center center;
+    background: url("/static/images/luca-bravo-272609.webp") no-repeat center center;
     background-size: cover;
     height: 400px;
     position: relative;

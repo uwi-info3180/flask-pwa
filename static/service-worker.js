@@ -53,7 +53,7 @@ self.addEventListener('fetch', (e) => {
 
     try {
       const response = await fetch(e.request);
-  
+
       // We could cache this new resource if we wanted to.
       // const cache = await caches.open(cacheName);
       // console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
@@ -68,7 +68,7 @@ self.addEventListener('fetch', (e) => {
       let extension = url.split('.').pop();
       console.log('URL: ', url);
 
-      if (extension === 'jpg' || extension === 'png') {
+      if (extension === 'jpg' || extension === 'png' || extension === 'webp') {
           const FALLBACK_IMAGE = `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="180" stroke-linejoin="round">
             <path stroke="#DDD" stroke-width="25" d="M99,18 15,162H183z"/>
             <path stroke-width="17" fill="#FFF" d="M99,18 15,162H183z" stroke="#eee"/>
